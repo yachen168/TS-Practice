@@ -1,0 +1,26 @@
+/* tsconfig.json 是 ts 編譯器的配置文件 */
+{
+  "include": [
+    "./src/**/*"
+  ] /* 用以指定哪些 ts 檔案需要被編譯 (*: 所有檔案; **: 所有目錄) */,
+  "exclude": [] /* 不需要被編譯的文件目錄，預設值為 ["node_modules", "bower_components",jspm_packages] /*
+
+  /************* compilerOptions *************/,
+  "compilerOptions": {
+    "target": "ES6" /* target：用以指定要編譯的 ES 版本 */,
+    "module": "ES6" /* module：指定要使用的模塊化規範 */,
+    // "lib": [], /* lib：用以指定項目中要使用的 library，若是在瀏覽器上運行，一般不需要設定，除非是要在 node 上運行 */
+    "outDir": "./dist" /* outDir：用以指定編譯後文件要放在哪裡 */,
+    // "outFile": "", /* outFile：將多個 .ts 代碼合併為一個 .js */
+    "allowJs": true /* 是否對 .js 檔案進行編譯，預設為 false */,
+    "checkJs": true /* 是否檢查 .js 代碼符合語法規範，預設為 false */,
+    "removeComments": false /* 編譯時是否移除註解 */,
+    // "noEmit": false /* 不生成編譯後檔案 */
+    // "noEmitOnError": true, /* 當有錯誤發生，不生成編譯後檔案 */
+    "strict": true /* 同時設定 alwaysStrict、noImplicitAny、noImplicitThis、strictNullChecks */
+    // "alwaysStrict": false /* 設定編譯後的檔案是否使用 js 嚴格模式，預設為 false */
+    // "noImplicitAny": true  /* 不允許沒定義類型時隱式的 any */
+    // "noImplicitThis": true  /* 不允許不明確類型的 this */
+    // "strictNullChecks": true  /* 嚴格的檢查(可能的)空值 */
+  }
+}
