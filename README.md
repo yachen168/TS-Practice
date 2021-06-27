@@ -2,11 +2,15 @@
 
 ## 基本 class
   1. 實例屬性，須透過實例對象調用:
+```javascript
   const yachen = new Person();
-  yachen.name
+  yachen.name;
+```
 
   2. 靜態屬性，使用 「static」開頭的屬性為靜態屬性(類屬性)，可直接透過類調用
+  ```javascript
   Person.name
+```
 
   3. readonly 開頭的屬性表示只能讀，不能改
   4. 構造函數 constructor，會在實例對象創建(new)時調用，裡面的 this 為實例對象，
@@ -24,5 +28,5 @@
 ## 抽象類 / 抽象方法
 1. 以 `abstract` 開頭的 class 為抽象類，不能 new 抽象類。希望父類只能被繼承，不能 new 時，可以使用抽象類
 
-2. 抽象方法以 `abstract` 開頭，抽象方法==只能定義在抽象類中==，且子類必須對該抽象方法進行重寫
+2. 抽象方法以 `abstract` 開頭，抽象方法`只能定義在抽象類中`，且`子類必須對該抽象方法進行重寫`
 
