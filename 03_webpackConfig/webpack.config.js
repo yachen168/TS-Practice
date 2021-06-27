@@ -17,7 +17,19 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.ts$/, use: ["ts-loader"], exclude: /node_modules/ },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+            },
+          },
+          "ts-loader",
+        ],
+        exclude: /node_modules/,
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
@@ -37,4 +49,9 @@ module.exports = {
       filename: "css/main.css",
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    open: true,
+  },
 };

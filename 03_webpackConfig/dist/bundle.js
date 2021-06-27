@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nexports.__esModule = true;\nvar test_1 = __webpack_require__(/*! ./test */ \"./src/test.ts\");\nconsole.log(test_1.fruits);\n\n\n//# sourceURL=webpack://03_webpack/./src/index.ts?");
+eval("\n\nexports.__esModule = true;\n\nvar test_1 = __webpack_require__(/*! ./test */ \"./src/test.ts\");\n\nconsole.log(test_1.fruits);\n\n//# sourceURL=webpack://03_webpack/./src/index.ts?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("\nexports.__esModule = true;\nvar test_1 = __webpack_require__(/*! ./test 
   \*********************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("\nexports.__esModule = true;\nexports.fruits = void 0;\nexports.fruits = [\"apple\", \"orange\"];\n\n\n//# sourceURL=webpack://03_webpack/./src/test.ts?");
+eval("\n\nexports.__esModule = true;\nexports.fruits = void 0;\nexports.fruits = [\"apple\", \"orange\"];\n\n//# sourceURL=webpack://03_webpack/./src/test.ts?");
 
 /***/ })
 
