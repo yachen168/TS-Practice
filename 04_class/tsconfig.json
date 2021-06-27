@@ -1,0 +1,7 @@
+{
+  "complierOptions": {
+    "module": "ES6",
+    "target": "ES6",
+    "strict": true
+  }
+}
