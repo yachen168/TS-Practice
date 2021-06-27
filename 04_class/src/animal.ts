@@ -4,6 +4,7 @@
 
  2. 子類中可另外新增父類沒有的屬性、方法
  3. override: 子類中若有和父類相同的方法，子類的會覆蓋掉父類的
+ 4. 在子類中，super 代表父類，如果在子類中寫 constructor，必須在裡面呼叫 super()，調用父類的 constructor 
 */
 class Animal {
   name: string;
@@ -18,6 +19,12 @@ class Animal {
 }
 
 export class Dog extends Animal {
+  color: string;
+  constructor(name: string, age: number, color: string) {
+    super(name, age);
+    this.color = color;
+  }
+
   bark() {
     console.log("汪汪");
   }
