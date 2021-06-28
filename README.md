@@ -64,5 +64,49 @@ class Dog implements animalInterface {
    - 在 interface 中，所有的方法都是抽象方法; 抽象類則不一定
 
 
+### public/private、getter/setter
+- piblic: 預設值，以 public 修飾的屬性可以再任意位置訪問、修改 （不安全）
+- private: 私有屬性，只能在當前的 class 內部進行訪問、修改。透過在 class 中添加 getter、setter 方法可以使私有屬性被外部訪問
+
+- protected: 以 protected 修飾的屬性只能在當前 class 和子類中訪問、修改
+  
+```javascript
+class Person {
+  private _name: string;
+  private _age: number;
+
+  constructor(name: string, age: number){
+    this._name = name;
+    this._age = age;
+  }
+
+  /* ts 設置 getter、setter 方式: get、set*/
+  get name(){
+    return this._name;
+  }
+
+  set name(value: string){
+    this._name = value;
+  }
+
+
+  // getter
+  // getName(){
+  //   return this._name;
+  // }
+
+  // setName(value: string){
+  //   this._name = value;
+  // }
+}
+
+const yachen = new Person(name: 'yachen', age: 20);
+
+// yachen.setName('yachen168');
+// console.log(yachen.getName());
+
+yachen.name = 'yachen168';   // 調用 ts 的 set name
+console.log(yachen.name);    // 調用 ts 的 get name
+```
 
 
